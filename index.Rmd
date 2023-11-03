@@ -11,8 +11,21 @@ output:
 
 ## Project thoughts
 
-I am interested in exploring data related to civil war onset.
+I am interested in exploring data related to sports analytics.
 
 I am basing my data off of a Kalyvas and Balcells (2010) data set showing the number of wars per civil war onset type in since 1944. The link to the data is below. I intend to see the relationship between civil war onset and externalities such as the cold war and the increase of technology to see how it relates to the number of civil wars AND the types of civil war onset. I would do this by comparing the number of civil wars OR the types of civil war onset to the year it took place. Then would further my analysis by looking to see what confounding variables possibly influence the civil wars. In my sophomore tutorial, I had actually expanded the data because Kalyvas and Balcells (2010) only went up to 2004, so I was planning to include the data I had collected, and expand on it further, to try to qualify and quantify some relationships within the data set.
 
 Here is the link to the Kalyvas and Balcells journal with the data. https://www-jstor-org.ezp-prod1.hul.harvard.edu/stable/40863761?typeAccessWorkflow=login
+
+```{r}
+library(ggplot2)
+
+civil_war_onset<- read_csv("Gov 50 Data Set - Sheet1.csv")
+civil_war_onset
+
+ggplot(data = civil_war_onset, aes(x = Year, y = `Number of Civil Wars`)) +
+  geom_line(color = "blue") +
+  labs(title = "Civil Wars since WWII", x = "Year", y = "Number of Civil Wars") +
+  theme_minimal()
+```
+#When comparing the number of civil wars to years since WWII, we see that there is a major increase post-Cold War, which coincides with the fall of communism. We can see in this graph that civil wars as a whole did not increase with a rise in technology post 2004. It fell back to around the quantity it was during the cold war. However, what we can look at next is whether or not the frequency of irregular warfare onsets and stagnant symmetric conventional and symmetric nonconventional onsets to see if technology increased or decreased a specific onset type. 
