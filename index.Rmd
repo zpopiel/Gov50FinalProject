@@ -29,3 +29,11 @@ ggplot(data = civil_war_onset, aes(x = Year, y = `Number of Civil Wars`)) +
   theme_minimal()
 ```
 #When comparing the number of civil wars to years since WWII, we see that there is a major increase post-Cold War, which coincides with the fall of communism. We can see in this graph that civil wars as a whole did not increase with a rise in technology post 2004. It fell back to around the quantity it was during the cold war. However, what we can look at next is whether or not the frequency of irregular warfare onsets and stagnant symmetric conventional and symmetric nonconventional onsets to see if technology increased or decreased a specific onset type. 
+
+```{r}
+library(ggplot2)
+civil_war_onset <- read_csv("Gov 50 Data Table - Sheet1.csv")
+civil_war_onset
+
+head(civil_war_onset)
+```
