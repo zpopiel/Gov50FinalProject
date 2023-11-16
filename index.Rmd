@@ -32,8 +32,11 @@ ggplot(data = civil_war_onset, aes(x = Year, y = `Number of Civil Wars`)) +
 
 ```{r}
 library(ggplot2)
-civil_war_onset <- read_csv("Gov 50 Data Table - Sheet1.csv")
-civil_war_onset
+civil_war_onset_table <- read_csv("Gov 50 Data Table - Sheet1.csv")
+civil_war_onset_table
 
-head(civil_war_onset)
+civil_war_onset_table
 ```
+
+
+When looking at the results of this expanded chart in the table, it proves my first part of my first hypothesis correct: that the relative frequency of irregular civil war increased since the Post-Cold war period. From 1991-2004, the relative frequency of irregular civil war increased from 26.09% to 66.67%, almost tripling the frequency of the onset. 66.67% is also significantly greater than the 54.72% average relative frequency seen across all periods. Then when looking at the second part of my first hypothesis—that the relative frequency of symmetric conventional and symmetric nonconventional stayed stagnant between the 1991-2004 period and the 2004-2023 period—we see that symmetric nonconventional does stay stagnant between the two periods, 26.09% and 25% respectively; but symmetric conventional decreases in relative frequency from 47.83% to 16.67%. 
