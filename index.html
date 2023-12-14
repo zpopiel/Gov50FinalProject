@@ -463,13 +463,11 @@ National Accord which was in power at the time. The conflict saw a
 militia group fighting a technologically advanced government. Guerilla
 warfare and assassination tactics were used. Again, all descriptors that
 describe irregular warfare. After the data points were classified, it
-was added to the expanded chart below (Figure 1).</p>
-<p>Figure 1</p>
+was added to the expanded chart below (Figure 1). Figure 1</p>
 <pre class="r"><code>library(kableExtra)</code></pre>
 <pre><code>## Warning in !is.null(rmarkdown::metadata$output) &amp;&amp; rmarkdown::metadata$output
 ## %in% : &#39;length(x) = 2 &gt; 1&#39; in coercion to &#39;logical(1)&#39;</code></pre>
-<pre class="r"><code>library(modelsummary)
-library(ggplot2)
+<pre class="r"><code>library(ggplot2)
 civil_war_onset_table &lt;- read.csv(&quot;Gov 50 Data Table - Sheet1.csv&quot;)
 kable(civil_war_onset_table)</code></pre>
 <table>
@@ -761,7 +759,12 @@ frequency of civil war onset as a whole increased as a result of more
 frequent irregular warfare onsets and stagnant symmetric conventional
 and symmetric nonconventional onsets. In order to see if the relative
 frequency has increased, I added yearly data on civil war onset since
-2004 to Kalyvas and Balcells’ (2010) data as seen below in Figure 2.</p>
+2004 to Kalyvas and Balcells’ (2010) data as seen below in Figure 2.
+Furthermore, the research design is cross-sectional because I am
+examining data from a specific time period (since 2004) and comparing
+the relative frequency across the 3 types of civil war onsets
+(irregular, symmetric conventional, and symmetric non-conventional)
+within that timeframe.</p>
 <p>Figure 2</p>
 <pre class="r"><code>library(ggplot2)
 
@@ -818,7 +821,9 @@ Regarding the decrease in the relative frequency of symmetric
 conventional warfare, I theorize it is a result of the nature of world
 affairs. Unlike the Post-Cold War era there has not been a large state
 breakup similar to Yugoslavia, so it just was simply bound to be less
-frequent.</p>
+frequent. When looking at the main coefficient of interest, it is the
+fact that social media is associated with a significant increase in
+irregular warfare in comparison to the other types of onset.</p>
 <p>Conclusion</p>
 <p>This project demonstrated that irregular civil war onsets’ relative
 frequency had significantly increased—as a result of the use of social
