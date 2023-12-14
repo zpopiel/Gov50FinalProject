@@ -3,8 +3,8 @@ title: "Gov 50 Final Project"
 author: "Zack Popiel"
 description: "My final project"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 

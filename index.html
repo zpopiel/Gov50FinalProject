@@ -465,7 +465,11 @@ warfare and assassination tactics were used. Again, all descriptors that
 describe irregular warfare. After the data points were classified, it
 was added to the expanded chart below (Figure 1).</p>
 <p>Figure 1</p>
-<pre class="r"><code>library(ggplot2)
+<pre class="r"><code>library(kableExtra)</code></pre>
+<pre><code>## Warning in !is.null(rmarkdown::metadata$output) &amp;&amp; rmarkdown::metadata$output
+## %in% : &#39;length(x) = 2 &gt; 1&#39; in coercion to &#39;logical(1)&#39;</code></pre>
+<pre class="r"><code>library(modelsummary)
+library(ggplot2)
 civil_war_onset_table &lt;- read.csv(&quot;Gov 50 Data Table - Sheet1.csv&quot;)
 civil_war_onset_table</code></pre>
 <pre><code>##   Civil.War.Onsets..by.Technology.of.Rebellion..1944.Present.
@@ -503,6 +507,291 @@ civil_war_onset_table</code></pre>
 ## 4                 87                         54.72%                      1.10
 ## 5                 20                         13.21%                      0.25
 ## 6                159                           100%                      2.01</code></pre>
+<pre class="r"><code>kable(civil_war_onset_table)</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Civil.War.Onsets..by.Technology.of.Rebellion..1944.Present.
+</th>
+<th style="text-align:left;">
+X
+</th>
+<th style="text-align:left;">
+X.1
+</th>
+<th style="text-align:left;">
+X.2
+</th>
+<th style="text-align:left;">
+X.3
+</th>
+<th style="text-align:left;">
+X.4
+</th>
+<th style="text-align:left;">
+X.5
+</th>
+<th style="text-align:left;">
+X.6
+</th>
+<th style="text-align:left;">
+X.7
+</th>
+<th style="text-align:left;">
+X.8
+</th>
+<th style="text-align:left;">
+X.9
+</th>
+<th style="text-align:left;">
+X.10
+</th>
+<th style="text-align:left;">
+X.11
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Technology of Rebellion
+</td>
+<td style="text-align:left;">
+Cold War
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Post-Cold War
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Social Media Era
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+All Periods
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Number (1944-1990)
+</td>
+<td style="text-align:left;">
+Relative Frequency (1944-1990)
+</td>
+<td style="text-align:left;">
+Rate Per Year (1944-1990)
+</td>
+<td style="text-align:left;">
+Number (1991-2004)
+</td>
+<td style="text-align:left;">
+Relative Frequency (1991-2004)
+</td>
+<td style="text-align:left;">
+Rate Per Year (1991-2004)
+</td>
+<td style="text-align:left;">
+Number (2004-2023)
+</td>
+<td style="text-align:left;">
+Relative Frequency (2004-2023)
+</td>
+<td style="text-align:left;">
+Rate Per Year (2004-2023)
+</td>
+<td style="text-align:left;">
+Number (1944-2023)
+</td>
+<td style="text-align:left;">
+Relative Frequenct (1944-2023)
+</td>
+<td style="text-align:left;">
+Rate Per Year (1944-2023)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Symmetric Conventional
+</td>
+<td style="text-align:left;">
+28
+</td>
+<td style="text-align:left;">
+27.72%
+</td>
+<td style="text-align:left;">
+0.61
+</td>
+<td style="text-align:left;">
+22
+</td>
+<td style="text-align:left;">
+47.83%
+</td>
+<td style="text-align:left;">
+1.69
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+16.67%
+</td>
+<td style="text-align:left;">
+0.11
+</td>
+<td style="text-align:left;">
+52
+</td>
+<td style="text-align:left;">
+32.70%
+</td>
+<td style="text-align:left;">
+0.66
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Irregular
+</td>
+<td style="text-align:left;">
+67
+</td>
+<td style="text-align:left;">
+66.24%
+</td>
+<td style="text-align:left;">
+1.46
+</td>
+<td style="text-align:left;">
+12
+</td>
+<td style="text-align:left;">
+26.09%
+</td>
+<td style="text-align:left;">
+0.92
+</td>
+<td style="text-align:left;">
+8
+</td>
+<td style="text-align:left;">
+66.67%
+</td>
+<td style="text-align:left;">
+0.42
+</td>
+<td style="text-align:left;">
+87
+</td>
+<td style="text-align:left;">
+54.72%
+</td>
+<td style="text-align:left;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Symmetric Non-Conventional
+</td>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:left;">
+5.94%
+</td>
+<td style="text-align:left;">
+0.13
+</td>
+<td style="text-align:left;">
+12
+</td>
+<td style="text-align:left;">
+26.09%
+</td>
+<td style="text-align:left;">
+0.92
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+25.00%
+</td>
+<td style="text-align:left;">
+0.11
+</td>
+<td style="text-align:left;">
+20
+</td>
+<td style="text-align:left;">
+13.21%
+</td>
+<td style="text-align:left;">
+0.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:left;">
+101
+</td>
+<td style="text-align:left;">
+100%
+</td>
+<td style="text-align:left;">
+2.20
+</td>
+<td style="text-align:left;">
+46
+</td>
+<td style="text-align:left;">
+100%
+</td>
+<td style="text-align:left;">
+3.54
+</td>
+<td style="text-align:left;">
+12
+</td>
+<td style="text-align:left;">
+100%
+</td>
+<td style="text-align:left;">
+0.63
+</td>
+<td style="text-align:left;">
+159
+</td>
+<td style="text-align:left;">
+100%
+</td>
+<td style="text-align:left;">
+2.01
+</td>
+</tr>
+</tbody>
+</table>
 <p>Additionally, I address my second hypothesis that the relative
 frequency of civil war onset as a whole increased as a result of more
 frequent irregular warfare onsets and stagnant symmetric conventional
