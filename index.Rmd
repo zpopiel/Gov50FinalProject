@@ -27,9 +27,14 @@ When qualitatively classifying the 3 types of civil war onset, I found that 2 da
 Figure 1
 
 ```{r}
+library(kableExtra)
+library(modelsummary)
 library(ggplot2)
 civil_war_onset_table <- read.csv("Gov 50 Data Table - Sheet1.csv")
 civil_war_onset_table
+
+kable(civil_war_onset_table)
+
 
 ```
 
